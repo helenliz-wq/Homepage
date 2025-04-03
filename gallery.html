@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+
+        <div class="school-name">MENGO SENIOR SCHOOL</div>
+        <div class="logo">
+        <img src="images/mengologo.jpg" alt="mengo ss logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>School Gallery</h2>
+        <div class="gallery">
+            <img src="images/sitting.jpeg" alt="School Event" onclick="openLightbox(this)">
+            <img src="images/study.jpg" alt="Students in Class" onclick="openLightbox(this)">
+            <img src="images/football.png" alt="Sports Activities" onclick="openLightbox(this)">
+            <img src="images/school environment.jpeg" alt="School Buildings" onclick="openLightbox(this)">
+            <img src="images/fund.jpeg" alt="School fundraising" onclick="openLightbox(this)">
+            <img src="images/medals.jpeg" alt="winning awards" onclick="openLightbox(this)">
+            <img src="images/prefects.jpg" alt="School leaders" onclick="openLightbox(this)">
+            <img src="images/student.jpg" alt="students in uniform" onclick="openLightbox(this)">
+            <img src="images/sport.jpeg" alt="football" onclick="openLightbox(this)">
+            <img src="images/exam.jpeg" alt="Examination" onclick="openLightbox(this)">
+            <img src="images/uniform.jpeg" alt="School uniform" onclick="openLightbox(this)">
+            <img src="images/fufa cup.jpeg" alt="sports activities" onclick="openLightbox(this)">
+
+        </div>
+    </main>
+
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+
+   
+    <footer>
+        <p>&copy; 2025 Mengo Senior School. All rights reserved.</p>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

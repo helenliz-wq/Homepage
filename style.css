@@ -1,0 +1,420 @@
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color : rgb(101, 37, 37);
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+header{
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+}
+
+.slide-show container{
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+.slides{
+    width: 100%;
+    height:100vh;
+    object-fit:cover;
+    display: block;
+    transition: transform 0.3s ease,box-shadow 0.3s;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slides:hover{
+    transform: scale(1.05);
+    box-shadow: inset 0 0 0 1000px rgb(from color r g b);
+}
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    
+    display: none;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.carousel-buttons button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #4087d4;
+    color: rgb(93, 31, 31);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.carousel-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.center-table {
+    margin: 0 auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.center-table th, .center-table td {
+    padding: 10px;
+    border: 1px solid #000;
+
+}
+
+.accordion {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #c67979;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .panel {
+    display: block;
+    color: #000; 
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top: none; 
+    transition: back-ground-color 0.3s, color 0.3s;
+  }
+
+  #testimonials {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+#testimonials h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.testimonial-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 150px; /* Set a fixed height for the container */
+}
+
+.testimonial {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start off-screen to the right */
+    width: 100%;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.testimonial.active {
+    left: 0; /* Move into view */
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.testimonial.previous {
+    left: -100%; /* Move off-screen to the left */
+    opacity: 0;
+    transform: translateX(0);
+}
+
+.testimonial p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.testimonial span {
+    font-size: 16px;
+    font-style: italic;
+    color: #666;
+}
+
+
+
+body.dark-mode .panel {
+    background-color: #333; 
+    color: #fff; 
+    border: 1px solid #444; 
+}
+  .error{
+    color:red;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+
+  .full-screen-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Makes the image span the full width */
+    height: 100%; /* Makes the image span the full height */
+    object-fit: cover; /* Ensures the image scales proportionally to cover the screen */
+    z-index: -1; /* Sends the image to the background */
+}
+
+
+
+
+
+
+.carousel-slide.active {
+    display: block; /* Show the active image */
+}
+
+/* Style the navigation bar */
+
+
+nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+
+
+.nav-links a:hover {
+    background-color: #575757; 
+    border-radius: 5px; 
+}
+
+#calendar {
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    background-color: #333;
+    color: rgb(57, 28, 28);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.calendar-header button:hover {
+    background-color: #575757;
+}
+
+.calendar-header #monthYear {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th,
+.calendar-table td {
+    width: 14.28%; /* 100% divided by 7 days */
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.calendar-table th {
+    background-color: #333;
+    color: white;
+}
+
+.calendar-table td {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.calendar-table td:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar-table td.inactive {
+    color: #ccc;
+    cursor: default;
+}
+.calendar-table td.event {
+    background-color: #ffeb3b; /* Highlight color for event cells */
+    color: #000; /* Text color for event cells */
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calendar-table td.event:hover {
+    background-color: #ffc107; /* Darker highlight on hover */
+}
+
+/* Default Light Mode Styles */
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+
+
+body.dark-mode .nav-links a {
+    color: #fff; /* Link color in dark mode */
+}
+
+.table {
+    background-color: #fff;
+}
+
+body.dark-mode .table {
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #575757;
+}
+
+body.dark-mode button {
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode button:hover {
+    background-color: #ddd;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text color */
+}
+
+/* Table header in dark mode */
+body.dark-mode th {
+    background-color: #444; /* Darker header background */
+    color: #fff; /* Light text color */
+}
+
+
+/* Default Light Mode Styles */
+body {
+    background-color: #f9f9f9;
+    color: #000; /* Default text color */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #fff; /* Light text color */
+}
+
+/* Ensure links are visible in dark mode */
+body.dark-mode a {
+    color: #1e90ff; /* Light blue for links */
+}
+
+/* Table text in dark mode */
+body.dark-mode table {
+    background-color: #333; /* Dark table background */
+    color: #fff; /* Light text color */
+    border-color: #444; /* Adjust border color */
+}
+
+/* Table header in dark mode */
+body.dark-mode th {
+    background-color: #444; /* Darker header background */
+    color: #fff; /* Light text color */
+}
+
+/* Buttons in dark mode */
+body.dark-mode button {
+    background-color: #444; /* Dark button background */
+    color: #fff; /* Light text color */
+    border: 1px solid #555; /* Adjust border color */
+}
+
+body.dark-mode button:hover {
+    background-color: #575757; /* Slightly lighter on hover */
+}
+
+/* Modal in dark mode */
+body.dark-mode .modal-content {
+    background-color: #333; /* Dark modal background */
+    color: #fff; /* Light text color */
+}
+
+/* Calendar in dark mode */
+body.dark-mode .calendar-table th {
+    background-color: #444; /* Dark header background */
+    color: #fff; /* Light text color */
+}
+
+body.dark-mode .calendar-table td {
+    background-color: #333; /* Dark cell background */
+    color: #fff; /* Light text color */
+}
+
+body.dark-mode .calendar-table td {
+    background-color: #333; /* Dark cell background */
+    color: #fff; /* Light text color */
+}

@@ -1,0 +1,137 @@
+/* styles.css */
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 30px;
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s, color 0.3s;
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: maroon;
+    border-radius: 30px 0px 30px 0px;
+    color: white;
+    padding: 20px;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.welcome {
+    padding: 20px;
+}
+
+.slideshow-container {
+    position: relative;
+            max-width: 100%;
+            margin: auto;
+            width: 800px;
+            height: 600px;
+            justify-content: center;
+            background-attachment: black;
+            overflow: hidden;
+            align-items: center;
+
+}
+
+.mySlides{
+    display: none;
+    position: relative;
+    
+
+}
+.mySlides img{
+height: auto;
+width: auto;
+object-fit: contain;
+max-width: 100%;
+max-height: 100%;
+display: block;
+
+}
+.text {
+    position: absolute;
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Adjust for the element's own size */
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60px);
+        /* Start slightly above */
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+        /* Centered */
+    }
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    position: relative;
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+.dark-mode nav ul li a {
+    color: black;
+}
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
